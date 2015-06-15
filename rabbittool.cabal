@@ -1,0 +1,28 @@
+name: rabbittool
+version: 0.1.0.0
+author: tv
+build-type: simple
+cabal-version: >=1.10
+license: MIT
+
+executable producer
+  main-is: producer.hs
+  build-depends:
+    amqp,
+    bytestring,
+    old-locale,
+    text,
+    time,
+    base
+  ghc-options: -Wall
+
+executable consumer
+  main-is: consumer.hs
+  build-depends:
+    amqp,
+    bytestring,
+    old-locale,
+    text,
+    time,
+    base
+  ghc-options: -Wall
